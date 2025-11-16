@@ -12,6 +12,7 @@
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{csquotes}
+\usepackage{epigraph}
 
 % Configurações de página
 \geometry{
@@ -25,9 +26,13 @@
 % Espaçamento
 \onehalfspacing
 
+% Configurações para epígrafes
+\setlength{\epigraphwidth}{0.8\textwidth}
+\setlength{\epigraphrule}{0pt}
+
 % Informações do livro
-\title{O Problema do Alinhamento:\\Aprendizado de Máquina e Valores Humanos}
-\author{Brian Christian\\[0.3cm]{\small Tradução: Adre Novais}}
+\title{O Problema do Alinhamento}
+\author{Brian Christian}
 \date{2025}
 
 % Bibliografia
@@ -38,25 +43,73 @@
 
 % Página de título
 \frontmatter
-\maketitle
+
+% Folha de rosto personalizada
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge\bfseries O Problema do Alinhamento\par}
+    \vspace{1cm}
+    {\Large MACHINE LEARNING AND HUMAN VALUES\par}
+    \vspace{2cm}
+    {\Large\scshape BRIAN CHRISTIAN\par}
+    \vfill
+    {\large A Norton Professional Book\par}
+    \vspace{1cm}
+    {\large Tradução: Adre Novais\par}
+    \vspace{0.5cm}
+    {\large 2025\par}
+\end{titlepage}
+
+% Nota do e-book
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{5cm}
+\begin{center}
+\textit{Este e-book contém alguns trechos que pedem ao leitor para preencher perguntas ou comentários. Tenha caneta e papel à mão enquanto lê este e-book para que você possa completar os exercícios nele.}
+\end{center}
+
+% Dedicatória
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{10cm}
+\begin{center}
+\textit{Para Peter, que me convenceu}\[0.5cm]
+\textit{E para todos que estão fazendo o trabalho}
+\end{center}
+
+% Epígrafes
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{3cm}
+\epigraph{Lembro-me de ter ouvido em 2000 James Martin, o líder das missões Viking a Marte, dizer que seu trabalho como engenheiro de espaçonaves não era pousar em Marte, mas pousar no modelo de Marte fornecido pelos geólogos.}{\textsc{Peter Norvig}\textsuperscript{1}}
+
+\vspace{2cm}
+
+\epigraph{O mundo é o seu melhor modelo.}{\textsc{Rodney Brooks}\textsuperscript{2}}
+
+\vspace{2cm}
+
+\epigraph{Todos os modelos estão errados.}{\textsc{George Box}\textsuperscript{3}}
 
 % Sumário
+\cleardoublepage
 \tableofcontents
 
-% Prefácio
-\chapter*{Prefácio}
-\addcontentsline{toc}{chapter}{Prefácio}
-\input{prefacio}
+% Prólogo
+\cleardoublepage
+\chapter*{Prólogo}
+\addcontentsline{toc}{chapter}{Prólogo}
+\input{prologo}
 
 % Corpo do livro
 \mainmatter
 
 % Capítulos - adicionar conforme necessário
-\input{capitulos/capitulo01}
-\input{capitulos/capitulo02}
-\input{capitulos/capitulo03}
-\input{capitulos/capitulo04}
-\input{capitulos/capitulo05}
+% \input{capitulos/capitulo01}
+% \input{capitulos/capitulo02}
+% etc.
 
 % Material final
 \backmatter
