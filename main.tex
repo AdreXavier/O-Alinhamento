@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper,twoside]{book}
+
+% Configurações de idioma
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Pacotes essenciais
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{csquotes}
+
+% Configurações de página
+\geometry{
+    a4paper,
+    top=3cm,
+    bottom=2cm,
+    left=3cm,
+    right=2cm
+}
+
+% Espaçamento
+\onehalfspacing
+
+% Informações do livro
+\title{O Problema do Alinhamento:\\Aprendizado de Máquina e Valores Humanos}
+\author{Brian Christian\\[0.3cm]{\small Tradução: AdreXavier}}
+\date{2025}
+
+% Bibliografia
+\usepackage[style=abnt]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\begin{document}
+
+% Página de título
+\frontmatter
+\maketitle
+
+% Sumário
+\tableofcontents
+
+% Prefácio
+\chapter*{Prefácio}
+\addcontentsline{toc}{chapter}{Prefácio}
+\input{prefacio}
+
+% Corpo do livro
+\mainmatter
+
+% Capítulos - adicionar conforme necessário
+\input{capitulos/capitulo01}
+\input{capitulos/capitulo02}
+\input{capitulos/capitulo03}
+\input{capitulos/capitulo04}
+\input{capitulos/capitulo05}
+
+% Material final
+\backmatter
+
+% Bibliografia
+\printbibliography[heading=bibintoc,title={Referências Bibliográficas}]
+
+\end{document}
